@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { TextFieldGroup } from "../common/TextFieldGroup";
 
 class Login extends Component {
   render() {
@@ -12,60 +13,34 @@ class Login extends Component {
             <div style={{ height: "150px" }}></div>
             <div className="container">
               <div className="card-body text-center">
+                {/* Login Form */}
                 <form className="form-group text-light">
-                  <div className="bg-white rounded-pill">
-                    <label
-                      htmlFor="username"
-                      style={{ top: "158px", left: "60px", zIndex: "1" }}
-                      className="rounded-pill bg-gold px-3 position-absolute"
-                    >
-                      Username
-                    </label>
-                    <div className="input-group">
-                      <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        placeholder="Username"
-                        className="form-control border-0"
-                        style={{ borderRadius: "10px" }}
-                      />
-                      <div className="input-group-append">
-                        <i className="input-group-text fas fa-user-circle bg-transparent text-gold border-0 m-auto"></i>
-                      </div>
-                    </div>
-                  </div>
+                  <TextFieldGroup
+                    labelStyle={{ top: "158px", left: "60px", zIndex: 4 }}
+                    inputStyle={{ borderRadius: "10px" }}
+                    name="username"
+                    placeholder="Username"
+                    icon="fa-user-circle"
+                    labelText="Username"
+                  />
 
-                  <div className="bg-white mt-5 rounded-pill">
-                    <label
-                      htmlFor="username"
-                      style={{ top: "242px", left: "60px", zIndex: 1 }}
-                      className="rounded-pill bg-gold px-3 position-absolute"
-                    >
-                      Password
-                    </label>
-                    <div className="input-group">
-                      <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        placeholder="Username"
-                        className="form-control border-0"
-                        style={{ borderRadius: "10px" }}
-                      />
+                  <TextFieldGroup
+                    labelStyle={{ top: "244px", left: "60px", zIndex: 4 }}
+                    inputStyle={{ borderRadius: "10px" }}
+                    name="password"
+                    className="mt-5"
+                    placeholder="Password"
+                    icon="fa-fingerprint"
+                    labelText="Password"
+                  />
 
-                      <div className="input-group-append">
-                        <i className="input-group-text fas fa-fingerprint text-gold bg-transparent border-0 m-auto"></i>
-                      </div>
-                    </div>
-                  </div>
                   <div className="mt-4">
                     <button className="btn bg-gold btn-block rounded-pill text-light">
                       Login
                     </button>
                   </div>
                 </form>
-                <a href="localhost:3000/reset-password" className="text-gold">
+                <a href="/reset-password" className="text-gold">
                   Forgot Password?
                 </a>
               </div>
