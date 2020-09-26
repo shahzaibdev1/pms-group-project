@@ -9,7 +9,7 @@ export const TextFieldGroup = (props) => {
         <label
           htmlFor={props.name}
           style={props.labelStyle}
-          className="rounded-pill bg-gold px-3 position-absolute"
+          className="rounded-pill bg-gold px-3 position-absolute text-light"
         >
           {props.labelText}
         </label>
@@ -48,6 +48,7 @@ TextFieldGroup.propTypes = {
   inputStyle: PropTypes.object,
   labelText: PropTypes.string.isRequired,
   onChange: PropTypes.func,
+  className: PropTypes.string,
 };
 
 TextFieldGroup.defaultProps = {
